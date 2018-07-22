@@ -1,5 +1,5 @@
 <template>
-  <nav id="main-nav">
+  <nav id="main-nav" class="section">
     <div class="container">
       <div class="logo-space">
 

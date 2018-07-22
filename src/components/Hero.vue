@@ -1,23 +1,15 @@
-<script>
-export default {
-  name: 'Hero',
-  data() {
-    return {
-      cta: "Agende sua visita"
-    }
-  }
-}
-</script>
 <template>
   <section id="hero">
     <img class="bg-image" src="/static/bg1-overlay-v1.jpg" alt="">
-    <div class="logo-container container">
-      <img id="main-logo" src="/static/logo.png" alt="">
-    </div>
-    <div class="btn-container container">
-      <a class="cta" href="#contato">
-        {{ cta }}
-      </a>
+     <div class="container">
+      <div class="logo-container">
+        <img id="main-logo" src="/static/logo.png" alt="">
+      </div>
+      <div class="cta-container">
+        <a class="cta" href="#contato">
+          Agende sua visita
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -32,11 +24,7 @@ export default {
 #hero {
   position:relative;
   height: 600px;
-  width: 100%;
-  width: 100vw;
   background-color: rgb(10, 48, 71);
-  display: flex;
-  flex-direction: column;
 }
 #main-logo {
   max-width: 90%;
@@ -46,24 +34,21 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
 }
-.btn-container {
-  flex: 0 1 5em;
+.cta-container {
+  flex: 0 1 auto;
   font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  text-align: center;
+  
 }
 .cta {
   color: white;
-  font-family: sans-serif;
   text-decoration: none;
   border: 2px solid white;
   border-radius: 4px;
+  display: inline-block;
   padding: .4em;
-
+  margin: 0 auto;
   transition-property: border-color, background-color;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
