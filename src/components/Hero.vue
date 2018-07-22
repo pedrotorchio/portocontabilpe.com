@@ -1,7 +1,7 @@
 <template>
   <section id="hero">
     <img class="bg-image" src="/static/bg1-overlay-v1.jpg" alt="">
-     <div class="container">
+     <div class="narrow container">
       <div class="logo-container">
         <img id="main-logo" src="/static/logo.png" alt="">
       </div>
@@ -14,6 +14,7 @@
   </section>
 </template>
 <style scoped lang="scss">
+@import '~@/styles/colors';
 .bg-image {
   position: absolute;
   width: 100%;
@@ -24,7 +25,7 @@
 #hero {
   position:relative;
   height: 600px;
-  background-color: rgb(10, 48, 71);
+  background-color: $blue;
 }
 #main-logo {
   max-width: 90%;
@@ -36,13 +37,13 @@
   justify-content: center;
 }
 .cta-container {
-  flex: 0 1 auto;
-  font-size: 24px;
+  flex: 0 1 3em;
   text-align: center;
-  
 }
 .cta {
   color: white;
+  font-size: 16px;
+  letter-spacing: 0.1em;
   text-decoration: none;
   border: 2px solid white;
   border-radius: 4px;
@@ -54,7 +55,7 @@
   transition-timing-function: ease-in-out;
 }
 .cta:hover {
-  $color: rgb(228, 68, 46);
+  $color: $red;
   border-color: $color;
   background-color: $color;
 }

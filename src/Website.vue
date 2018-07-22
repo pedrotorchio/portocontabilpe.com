@@ -25,38 +25,35 @@ export default {
 </script>
 <style src="reset-css"></style>
 <style lang="scss">
+@import '~@/styles/colors';
+@import '~@/styles/common';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
 * {
   box-sizing: border-box;
 }
 @font-face {
   font-family: Estandar;
   src: url('/static/Estandar.otf');
-
 }
 body {
-  font-family: Estandar, sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
+  color: $text;
 }
+a {
+  color: $text;
 
-.fill {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.circle {
-  border: {
-    radius: 50%;
-    style: solid;
-    color: transparent;
+  &:hover {
+    color: $red;
   }
-  overflow: hidden;
 }
 section, .section {
   display: flex;
   flex-direction: column;
   width: 100%;
   width: 100vw;
-
+  z-index: 1;
   &> .container {
     padding: 4rem 0;
     flex: 1 1 100%;
@@ -66,6 +63,10 @@ section, .section {
     width: 100%;
     margin: 0 auto;
     z-index: 2;
+    
+    &.narrow {
+      padding: 0;
+    }
   }
 }
 </style>

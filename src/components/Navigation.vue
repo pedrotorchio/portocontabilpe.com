@@ -1,6 +1,6 @@
 <template>
   <nav id="main-nav" class="section">
-    <div class="container">
+    <div class="narrow container">
       <div class="logo-space">
 
       </div>
@@ -13,6 +13,8 @@
   </nav>
 </template>
 <style lang="scss" scoped>
+@import '~@/styles/colors';
+
 #main-nav {
   position: fixed;
   top: 0;
@@ -39,8 +41,12 @@
   a {
     color: white;
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: 100;
+    letter-spacing: .08em;
+    
+    &:hover {
+      color: $red;
+    }
   }
 }
 </style>

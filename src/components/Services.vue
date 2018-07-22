@@ -1,9 +1,34 @@
 <script>
 import Service from './services/Service';
 
+import contabil from './services/contabil';
+import fisctrib from './services/fiscal&tributario';
+
 export default {
   components: {
     Service
+  },
+  data() {
+    return {
+      content: {
+        title: '',
+        component: null
+      },
+      s: {
+        contabil,
+        fisctrib
+      }
+    }
+  },
+  methods: {
+    expand(content) {
+      if (this.content.title == content.title) {
+        this.content.title = '';
+      } else {
+        this.content.title = content.title;
+        this.content.component = content.component;
+      }
+    }
   }
 }
 </script>
@@ -13,13 +38,29 @@ export default {
     <div class="container">
       <h2>Experiência no mercado nacional de construção</h2>
       <div class="services">
-        <service title="Contábil"></service>
-        <service title="Fiscal / Tributário"></service>
-        <service title="Pessoal"></service>
-        <service title="Processos e Legalizações"></service>
-        <service title="Apoio Administrativo"></service>
+        <service title="Contábil" 
+          :content= "s.contabil"
+          :expanded= "content.title == 'Contábil'"
+          @expand= "expand"/>
+        <service title="Fiscal / Tributário"  
+          :content= "s.fisctrib"  
+          :expanded= "content.title == 'Fiscal / Tributário'"
+          @expand= "expand"/>
+        <service title="Pessoal" 
+          :content= "s.contabil"   
+          :expanded= "content.title == 'Pessoal'"
+          @expand= "expand" center/>
+        <service title="Processos e Legalizações" 
+          :content= "s.contabil"  
+          :expanded= "content.title == 'Processos e Legalizações'"
+          @expand= "expand" invert/>
+        <service title="Apoio Administrativo"  
+          :content= "s.contabil"   
+          :expanded= "content.title == 'Apoio Administrativo'"
+          @expand= "expand" invert/>
       </div>
-    </div>
+</div>
+
   </section>  
 </template>
 <style lang="scss" scoped>
@@ -35,7 +76,20 @@ export default {
     align-items: stretch;
   }
   .service {
-    flex: 0 1 200px;
+    flex: 0 0 20%;
+    width: 20%;
+    max-width: 20%;
+  }
+  .content {
+    overflow: hidden;
+    max-height: 0;
+    transition: {
+      property: max-height;
+      duration: 1s;
+    }
+    &.show {
+      max-height: 900px;
+    }
   }
 </style>
 
