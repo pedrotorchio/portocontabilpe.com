@@ -40,7 +40,7 @@ export default {
         { expanded, invert }
       ]"
     >
-      <component :is= "content" />>
+      <component :is= "content" />
     </div>
     <div class="img circle">
       <img class="fill" src="/static/consultoria.jpg" alt="">
