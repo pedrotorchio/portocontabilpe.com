@@ -40,6 +40,8 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   color: $text;
+
+  min-height: 1400px;
 }
 a {
   color: $text;
