@@ -37,6 +37,20 @@ body {
   font-family: Estandar, sans-serif;
   font-size: 16px;
 }
+
+.fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.circle {
+  border: {
+    radius: 50%;
+    style: solid;
+    color: transparent;
+  }
+  overflow: hidden;
+}
 section, .section {
   display: flex;
   flex-direction: column;
@@ -44,7 +58,7 @@ section, .section {
   width: 100vw;
 
   &> .container {
-    padding: 2em;
+    padding: 4rem 0;
     flex: 1 1 100%;
     display: flex;
     flex-direction: column;
@@ -55,4 +69,3 @@ section, .section {
   }
 }
 </style>
-
