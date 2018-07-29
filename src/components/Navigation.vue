@@ -41,7 +41,7 @@
   a {
     color: white;
     text-decoration: none;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: .08em;
     
     &:hover {

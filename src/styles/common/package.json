@@ -1,0 +1,16 @@
+{
+  "name": "bubble-css",
+  "version": "1.0.0",
+  "description": "Css for bubble box",
+  "main": "bubble.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "bubble"
+  ],
+  "author": "pedrotorchio <pedrotorchio@gmail.com>",
+  "license": "ISC"
+}

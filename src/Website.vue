@@ -38,6 +38,7 @@ export default {
 }
 body {
   font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
   font-size: 16px;
   color: $text;
 
