@@ -1,3 +1,16 @@
+<script>
+import scrollTo from 'scroll-to-anchor';
+
+export default {
+  methods: {
+    click(hash) {  
+      scrollTo(hash, { behavior: 'smooth' });
+    
+    }
+  }
+}
+</script>
+
 <template>
   <nav id="main-nav" class="section">
     <div class="narrow container">
@@ -5,9 +18,9 @@
 
       </div>
       <ul>
-        <li><a href="#quem-somos">Quem Somos</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
+        <li><a @click.prevent="click('#quem-somos')">Quem Somos</a></li>
+        <li><a @click.prevent="click('#servicos')">Serviços</a></li>
+        <li><a @click.prevent="click('#contato')">Contato</a></li>
       </ul>
     </div>
   </nav>
@@ -43,7 +56,7 @@
     text-decoration: none;
     font-weight: 300;
     letter-spacing: .08em;
-    
+    cursor: pointer;
     &:hover {
       color: $red;
     }

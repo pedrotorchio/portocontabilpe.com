@@ -37,7 +37,7 @@
   justify-content: center;
 }
 .cta-container {
-  flex: 0 1 3em;
+  flex: 0 1 4em;
   text-align: center;
 }
 .cta {

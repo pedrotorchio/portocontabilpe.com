@@ -64,8 +64,14 @@ export default {
   </section>  
 </template>
 <style lang="scss" scoped>
+  .container {
+    justify-content: center;
+  }
+  #servicos {
+    min-height: 500px;
+  }
   h2 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 2rem;
   }
